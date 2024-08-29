@@ -27,10 +27,10 @@ public class EmailSender {
      *     }
      *     private JavaMailSender createMailSender() {//邮件配置
      *         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-     *         mailSender.setHost("smtp.163.com");
-     *         mailSender.setPort(465);
-     *         mailSender.setUsername("18185352727@163.com");
-     *         mailSender.setPassword("DNYBOVKHEYGJFIGM");
+     *         mailSender.setHost("????");//设置 SMTP 服务器地址
+     *         mailSender.setPort(?????); // 设置 SMTP 服务器的端口号
+     *         mailSender.setUsername("??????");// 设置发送邮件的邮箱用户名（通常是邮箱地址）
+     *         mailSender.setPassword("??????");// 设置发送邮件的邮箱密码（或应用专用密码）
      *         Properties props = mailSender.getJavaMailProperties();
      *         props.put("mail.smtp.auth", "true");
      *         props.put("mail.smtp.starttls.enable", "true");
