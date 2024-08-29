@@ -29,8 +29,8 @@ public class EmailSender {
      *         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
      *         mailSender.setHost("????");//设置 SMTP 服务器地址
      *         mailSender.setPort(?????); // 设置 SMTP 服务器的端口号
-     *         mailSender.setUsername("??????");// 设置发送邮件的邮箱用户名（通常是邮箱地址）
-     *         mailSender.setPassword("??????");// 设置发送邮件的邮箱密码（或应用专用密码）
+     *         mailSender.setUsername("??????");// 设置发送邮件的邮箱用户名
+     *         mailSender.setPassword("??????");// 设置发送邮件的邮箱密码
      *         Properties props = mailSender.getJavaMailProperties();
      *         props.put("mail.smtp.auth", "true");
      *         props.put("mail.smtp.starttls.enable", "true");
@@ -42,14 +42,14 @@ public class EmailSender {
     {
         try{
             SimpleEmail simpleEmail=new SimpleEmail();
-            simpleEmail.setHostName("smtp.163.com");
-            simpleEmail.setAuthentication("18185352727@163.com","DNYBOVKHEYGJFIGM");
-            simpleEmail.setFrom("18185352727@163.com","HQX");
-            simpleEmail.setSSLOnConnect(true);
-            simpleEmail.addTo(email);
-            simpleEmail.setSubject("验证码");
-            simpleEmail.setMsg("登录邮箱验证码："+code);
-            simpleEmail.send();
+            simpleEmail.setHostName("");//设置邮件服务器的主机名
+            simpleEmail.setAuthentication("","");//设置发件人的邮箱和授权码进行身份验证
+            simpleEmail.setFrom("","");//设置发件人的邮箱地址和名称
+            simpleEmail.setSSLOnConnect(true);//启用 SSL 加密
+            simpleEmail.addTo(email);//收件人的邮箱地址
+            simpleEmail.setSubject("验证码");//设置邮件的主题
+            simpleEmail.setMsg("登录邮箱验证码："+code);//设置邮件的内容
+            simpleEmail.send(); // 发送邮件
         } catch (EmailException e) {
             throw new RuntimeException(e);
         }
