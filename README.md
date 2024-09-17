@@ -16,3 +16,7 @@
 フロントエンド：Vue.js、ElementUI、Axios
 
 ###メール機能を使用するには、メールアカウントの認証を取得する必要があります。EmailSenderクラスで認証コードを送信するメールアドレスを設定してください。対応するデータは db_reggie.sql です。
+
+![image](https://github.com/user-attachments/assets/52741821-e71a-4e34-af93-9ec575a8bcf3)
+
+![image](https://github.com/user-attachments/assets/84fcee83-dc23-4ffb-b32a-ed47d45513ab)
